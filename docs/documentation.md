@@ -19,11 +19,11 @@ Flux SDK is a developer-friendly toolkit that enables blockchain transactions wi
 ```sh
 npm install flux-sdk
 
-Import into Your Project
+// Import into Your Project
 
 import { sendGaslessTransaction } from 'gasless-sdk';
 
-2. Getting Started
+// 2. Getting Started
 
 Initialize SDK
 Configure the SDK with your API key and network:
