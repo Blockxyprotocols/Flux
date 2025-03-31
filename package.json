@@ -1,0 +1,21 @@
+{
+  "name": "gasless-sdk",
+  "version": "1.0.0",
+  "description": "A gasless transaction SDK for Web3",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "@biconomy/mexa": "^1.0.0",
+    "ethers": "^5.7.0"
+  },
+  "devDependencies": {
+    "mocha": "^9.0.0",
+    "webpack": "^5.0.0"
+  },
+  "keywords": ["gasless", "web3", "sdk"],
+  "author": "Your Name",
+  "license": "MIT"
+}
