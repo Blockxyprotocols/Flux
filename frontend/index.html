@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flux SDK</title>
+  <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.0/dist/ethers.umd.min.js"></script>
+</head>
+<body>
+  <button id="connectWallet">Connect Wallet</button>
+  <button id="sendTx">Send Flux Transaction</button>
+  <script>
+    document.getElementById('connectWallet').addEventListener('click', async () => {
+      if (window.ethereum) {
+        await window.ethereum.request({ method: "eth_requestAccounts" });
+        alert("Wallet Connected!");
+      } else {
+        alert("Please install MetaMask!");
+      }
+    });
+
+    document.getElementById('sendTx').addEventListener('click', async () => {
+      alert("Flux transaction initiated!");
+    });
+  </script>
+</body>
+</html>
