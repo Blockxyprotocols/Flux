@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Flux SDK</title>
+  <title>Flux SDK - Auth Example</title>
   <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.0/dist/ethers.umd.min.js"></script>
+  <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>
+  <script src="https://bundle.run/bs58@5.0.0"></script>
+  <style>
+    body { font-family: sans-serif; padding: 2em; }
+    button { margin: 0.5em; padding: 0.5em 1em; }
+    #userInfo { margin-top: 1em; padding: 1em; background-color: #f0f0f0; border-radius: 5px; }
+  </style>
 </head>
 <body>
-  <button id="connectWallet">Connect Wallet</button>
-  <button id="sendTx">Send Flux Transaction</button>
-  <script>
-    document.getElementById('connectWallet').addEventListener('click', async () => {
-      if (window.ethereum) {
-        await window.ethereum.request({ method: "eth_requestAccounts" });
-        alert("Wallet Connected!");
-      } else {
-        alert("Please install MetaMask!");
-      }
-    });
+  <h1>Flux SDK - Wallet Authentication</h1>
+  
+  <button id="signInMetaMask">Sign-In with MetaMask</button>
+  <button id="signInPhantom">Sign-In with Phantom</button>
 
-    document.getElementById('sendTx').addEventListener('click', async () => {
-      alert("Flux transaction initiated!");
-    });
-  </script>
+  <div id="userInfo" style="display: none;">
+    <h3>User Information</h3>
+    <p><strong>Status:</strong> <span id="status"></span></p>
+    <p><strong>Address/PublicKey:</strong> <span id="userAddress"></span></p>
+    <p><strong>JWT:</strong> <span id="jwtToken" style="word-break: break-all;"></span></p>
+    <button id="signOut">Sign Out</button>
+  </div>
+
+  <script src="auth.js"></script>
 </body>
 </html>
