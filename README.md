@@ -1,3 +1,5 @@
+https://www.npmjs.com/package/blockxy-flux
+
 # Flux SDK
 
 ## Overview
